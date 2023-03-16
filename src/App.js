@@ -1,6 +1,9 @@
 import './App.css';
+import './assets/style.css';
 import axios from "axios";
-import Posts from './components/posts';
+import Posts from './pages/posts';
+import Home from './pages/homepage';
+import Footer from './components/Footer/Footer';
 import {useEffect, useState} from "react";
 
 const API_URL = "http://localhost:3000/api/posts";
@@ -24,9 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello Dr Drone</h1>
+      <Home />
       <Posts posts={posts} />
-      <h5>Fin d'affichage</h5>
+      <Footer />
     </div>
   );
 }
